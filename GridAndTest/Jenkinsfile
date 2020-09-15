@@ -8,7 +8,7 @@ pipeline
             steps 
             {
                 //sh      
-                bat "docker-compose -f D:\DockerComposeFiles\GridAndTest\docker-compose.yaml up --no-color"
+                bat "docker-compose -f D:/DockerComposeFiles/GridAndTest/docker-compose.yaml up --no-color"
             }
         }
         stage('Bring it down') 
@@ -17,7 +17,7 @@ pipeline
             {
                 //sh
                 bat "cd GridAndTest"
-                bat "docker-compose -f D:\DockerComposeFiles\GridAndTest\docker-compose.yaml down"
+                bat "docker-compose -f D:/DockerComposeFiles/GridAndTest/docker-compose.yaml down"
             }
         }
         
