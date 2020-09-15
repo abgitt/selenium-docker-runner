@@ -8,7 +8,7 @@ pipeline
             steps 
             {
                 //sh
-                bat "docker-compose up --no-colors"
+                bat "docker-compose up --no-color"
             }
         }
         stage('Bring it down') 
