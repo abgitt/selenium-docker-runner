@@ -25,7 +25,7 @@ pipeline
     {
         always
         {
-           archiveArtifacts artifacts: 'C:\Users\Abilash\Desktop\DockerMapper\output\**'
+           archiveArtifacts artifacts: 'output/**'
            bat "docker-compose -f D:/DockerComposeFiles/GridAndTest/docker-compose.yaml down"
         }
     }
