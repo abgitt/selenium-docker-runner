@@ -19,15 +19,14 @@ pipeline
                 bat "docker-compose -f D:/DockerComposeFiles/GridAndTest/docker-compose.yaml up search-module book-flight-module"
             }
         }
-        stage('Stop Grid') 
+      
+    }
+    post
+    {
+        always
         {
-            steps 
-            {
-                //sh
-                
-                bat "docker-compose -f D:/DockerComposeFiles/GridAndTest/docker-compose.yaml down"
-            }
+           archiveArtifacts artifacts: 'C:\Users\Abilash\Desktop\DockerMapper\output\**'
+           bat "docker-compose -f D:/DockerComposeFiles/GridAndTest/docker-compose.yaml down"
         }
-        
     }
 }
